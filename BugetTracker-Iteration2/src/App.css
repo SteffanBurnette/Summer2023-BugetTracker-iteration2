@@ -1,19 +1,22 @@
 body {
   /*background-color:#313032*/
  /* background-image:url("https://media.giphy.com/media/Qw4X3Fq4mZnlIOkeJ9e/giphy.gif"); */
-  background-image:url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/40de6540315683.58808074c910a.gif");
+  /*background-image:url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/40de6540315683.58808074c910a.gif"); */
   background-size:100%;
-  
+  /*background-image:url("https://i1.wp.com/media.giphy.com/media/xTiTnxpQ3ghPiB2Hp6/giphy.gif?resize=500%2C281&ssl=1")  */
+ /* background-image:url("https://www.bing.com/th/id/OGC.0d6998ea839843decdaa7d0f90833365?pid=1.7&rurl=http%3a%2f%2fwww.ibm.com%2fanalytics%2fmx%2fes%2fbusiness%2ffinancial-analysis%2fimages%2fProfitability-Modeling-Leadspace.gif&ehk=NU%2bTBb76q%2bDsaPj4wHNZrBlQLvR9zHycCr3PvnjreXg%3d") */
+background-image:url("https://i.pinimg.com/originals/75/f5/a4/75f5a4bf815ae6c8f9d79da0e3655594.gif")
+/*background-image:url("https://i.pinimg.com/originals/5f/0c/8b/5f0c8bc65470f8b8b011802a14c2a099.gif") */
+
   }
 
-  * {
-    box-sizing: border-box;
-  }
-
+ 
   .div-form{
     /*background-color: #e8c5a1; */
     /*background-color: #dbd9d7 */
-    background-image:url("https://th.bing.com/th/id/OIP.bBMCkcwjl0nZO69avxQokwAAAA?pid=ImgDet&rs=1");
+    /*background-image:url("https://th.bing.com/th/id/OIP.bBMCkcwjl0nZO69avxQokwAAAA?pid=ImgDet&rs=1"); */
+    background-color:#f1f1ec;
+    
     background-size: cover;
   
   
@@ -55,21 +58,24 @@ body {
     font-size: 1.4rem;
     /*background: whitesmoke; */
     margin: 0;
-    padding: 1rem;
+    padding: 20px;
     display: grid;
     place-items: center;
     min-height: 100vh;
+    
   }
   
   ul {
     list-style-position: inside;
     width: 600px;
+    /*width:80%;*/
     max-width: 100%;
     background: white;
     box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.15);
     padding: 0;
     margin: 0;
     border-radius: 0.1rem;
+    
   }
   
   li {
@@ -131,6 +137,7 @@ body {
   }
   
   .scrollable-list {
+    padding:20px;
     height: 200px; /* Set a fixed height for the scrollable container */
     overflow-y: auto; /* Enable vertical scrolling */
     width: 80%;
@@ -138,17 +145,19 @@ body {
     box-shadow: 10px 10px 40px rgba(black, .15);
     border-radius: 0 0 10px 10px;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' width='14' viewBox='0 0 50 50'%3E%3Cpath d='M46.5 12.5c-.4-1.1-1.3-1.8-2.2-2-4.2-4-11.6-4.3-17.1-4.1-6.9.3-13.9 2.1-19.4 6.5C2 17.5-2.4 25.7 2.5 32.6c2.2 3.2 5.5 4.9 9 5.5 3.3 1.7 6.7 3.3 10.2 4.4 7.8 2.3 17 1.6 23.2-4.3 7.3-7 4.8-17.3 1.6-25.7zm-20.2 2.7c.6 0 1.3 0 1.8.2 1.1.4 1.7 1.3 2 2.3-1-1.2-2.4-2.1-3.8-2.5zm-1.4 6.6c.9.9 1.3 2.2-.2 2.3-2 .2-1.1-1.9.2-2.3zm-11.8 9.8c-.6-.3-2.9-1.1-3.2-1.8-.2-.5 1.4-3.1 2.1-4.2.3.5.7 1 1.2 1.4 0 .3.1.6.2.8.5 1.9 1.5 3.1 2.9 4h-.2c-.8.1-1.6.1-2.5-.1-.2 0-.3 0-.5-.1zM24 36.4c1.6-.7 3-1.5 4.3-2.5.8.2 1.7.3 2.5.5 2.5.4 5.2.9 7.7.6-.9.6-2 1.1-3 1.4-3.9 1.3-7.7 1-11.5 0z'/%3E%3C/svg%3E") ' ';
-    
+    margin: 0 auto; /* Center the div horizontally */
+    margin-top:30x;
+    margin-bottom:30px;
   }
   
   .scrollable-list ul {
-    list-style-type: none;
+   list-style-type: none;
     padding: 0;
     margin: 0;
   }
   
   .scrollable-list ul li {
-    margin-bottom: 10px;
+    margin-bottom: 7px;
   }
   
   .notepad {
@@ -167,38 +176,143 @@ body {
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+
+
+/* navbar */
+header nav {
+  display: flex;
+  gap: 10px;
+  margin-top: 0px;
+  /*display: flex;
+  gap: 16px;
+  /*justify-content:center; */
+ /* max-width: 1200px;
+  margin: 0 auto; */
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+header nav h1 {
+ /* margin-top: auto; */
+ margin-top: 10px;
+  border-bottom: 3px solid var(--primary);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main-nav{
+  padding: 0px;
+  border: 2px solid white;
+   border-radius: 4px;
+   text-decoration: none;
+   /*
+   text-decoration: none;
+   padding: 3px;
+   border-radius: 2px; */
+   margin:10px;
+   margin-bottom: 100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.update-button{
+  
+    padding: 0px;
+    border: 2px solid white;
+     border-radius: 4px;
+     text-decoration: none;
+     /*
+     text-decoration: none;
+     padding: 3px;
+     border-radius: 2px; */
+     margin:10px;
+     
+ 
 }
 
-.card {
-  padding: 2em;
+a.active{
+  background: var(--primary);
 }
 
-.read-the-docs {
-  color: #888;
+
+
+header nav a.active {
+  background: var(--primary);
 }
+
+.main-header-nav{
+  /*
+ display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; */
+  display: flex;
+  gap: 16px;
+  justify-content: end;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+/*
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+*/
+
+:root {
+  --primary: #e9e8c7;
+  --secondary: #2b3452;
+}
+
+/* faq */
+.faq .question {
+  background: rgba(121, 119, 107, 0.2);
+  padding: 5px 20px;
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+.transactionslist-nav{
+  padding: 5px;
+  border: 2px solid white;
+  border-radius: 4px;
+  text-decoration: none;
+  margin:10px;
+
+}
+
+.help-layout nav a{
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.help-layout nav a:hover{
+  border-color: var(--primary);
+}
+.help-layout nav a.active {
+  background: var(--primary);
+}
+
+/* contact form */
+
+.contact-form{
+  margin-top: 10px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  
+
+  
+}
+  
+.contact-form-input-textarea{
+  margin-bottom: 30px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 0;
+  width: 300px;
+  color: var(--secondary);
+
+}
+ .contact-form-label{
+  margin-bottom: 2px;
+ }
+
+

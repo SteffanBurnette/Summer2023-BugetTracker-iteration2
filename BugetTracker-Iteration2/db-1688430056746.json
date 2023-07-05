@@ -1,0 +1,25 @@
+{
+  "purchaseHistory": [
+    {
+      "id": 1,
+      "date": "1/5/23",
+      "amount": 15.9,
+      "vendor": "Amazon",
+      "item": "Speaker"
+    },
+    {
+      "id": 2,
+      "date": "1/8/23",
+      "amount": 70.95,
+      "vendor": "Apple",
+      "item": "Bottle of Water"
+    },
+    {
+      "id": 3,
+      "date": "1/13/23",
+      "amount": 80,
+      "vendor": "Best Buy",
+      "item": "Ps5 Controller"
+    }
+  ]
+}

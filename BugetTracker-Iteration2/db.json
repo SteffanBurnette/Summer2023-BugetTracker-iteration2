@@ -1,23 +1,60 @@
 {
-    "purchaseHistory":[
-  
-    {"id":"1",
-    "date":"1/5/23",
-    "amount":15.90,
-    "vendor":"Amazon",
-    "item":"Speaker"
-  },
-  { "id":"2",
-    "date":"1/8/23",
-   "amount":70.95,
-   "vendor":"Apple",
-   "item":"Bottle of Water"
-  },
-  { "id":"3",
-    "date":"1/13/23",
-   "amount":80,
-   "vendor":"Best Buy",
-   "item":"Ps5 Controller"
-  }
+  "purchaseHistory": [
+    {
+      "id": 2,
+      "date": "1/8/23",
+      "amount": 70.95,
+      "vendor": "Apple",
+      "item": "Bottle of Water"
+    },
+    {
+      "id": 3,
+      "date": "1/13/23",
+      "amount": 80,
+      "vendor": "Best Buy",
+      "item": "Ps5 Controller"
+    },
+    {
+      "date": "2023-07-04",
+      "amount": 234,
+      "vendor": "Apple",
+      "item": "EarPods",
+      "id": 4
+    },
+    {
+      "date": "2023-07-04",
+      "amount": 300,
+      "vendor": "Air on Us",
+      "item": "Air",
+      "id": 5
+    },
+    {
+      "date": "2023-06-13",
+      "amount": 450,
+      "vendor": "Logitech Co",
+      "item": "Mechanical Keyboard",
+      "id": 6
+    },
+    {
+      "date": "2023-07-05",
+      "amount": 345,
+      "vendor": "Nike",
+      "item": "Dunks",
+      "id": 7
+    },
+    {
+      "date": "2023-03-07",
+      "amount": 45,
+      "vendor": "Whole Foods",
+      "item": "Steak",
+      "id": 8
+    },
+    {
+      "date": "2023-07-05",
+      "amount": 90,
+      "vendor": "Amazon",
+      "item": "Socks",
+      "id": 9
+    }
   ]
 }

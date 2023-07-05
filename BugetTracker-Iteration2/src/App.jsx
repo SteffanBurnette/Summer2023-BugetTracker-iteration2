@@ -1,14 +1,27 @@
-import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import AddTransactions from './AddTransactions'
-import RemoveTransactions from './RemoveTransactions'
+import { useState, useEffect } from 'react';
+import './App.css';
+import {useLoaderData} from 'react-router-dom';
+import { NavLink, Outlet, Form, redirect, Link } from "react-router-dom"
+//import {RemoveTransactionAction} from "./transactionMethods/RemoveTransactions"
+import { RemoveTransactionAction } from "./transactionMethods/RemoveTransactions";
+
 
 function App() {
   const [count, setCount] = useState(0)
   const [transactions, setTransactions]= useState([]);
 
+
+const transactionFromLoader= useLoaderData();
+
+const handleDeleteTransaction = async () => {
+  try {
+    await RemoveTransactionAction();
+    // Handle success or additional logic here
+  } catch (error) {
+    // Handle error here
+    console.log("The transaction did not come through.");
+  }
+};
 
   //I was recieving an issue where everytime i would have the user submit a new transaction
   //The list would seem to not update. This was weird to me because i had the list in a 
@@ -23,7 +36,7 @@ function App() {
     //Function that retrives info from the db.json file
     async function fetchTransactions(){
       //gets the information from the json file
-      const response= await fetch('http://localhost:3000/purchaseHistory'); 
+      const response= await fetch('http://localhost:4000/purchaseHistory'); 
       const purchaseHist=await response.json();
       setTransactions(purchaseHist);//Sets the data in the json file to the transaction state
       return purchaseHist;
@@ -43,14 +56,8 @@ function App() {
       return [...transactions, newTransaction];
     });
   };
-/*
-const onRemoveTransaction=(newTransaction)=>{
 
-  setTransactions((transactions)=>{
-    return [...transactions, newTransaction];
-  })
-};
-*/
+
 //Checks to see if the item to be removed is equal to any of the other items in the object
 //If so those items will not be assigned to prevTransactions and after iterating through
 //prevTransactions will be set.
@@ -60,35 +67,66 @@ const onRemoveTransaction = (removedItem) => {
   });
 };
 
+//let spent=+transactions.forEach((transaction)=>transaction.amount)
 
-
-
-
-  return (
-    <>
-    <div className="left-div">
-    <div className="scrollable-list">
-          <h1 className="div-form">Transctions: </h1>
-          {transactions.map((transaction) => (
-            <ul key={transaction.id}>
-              <li>Date: {transaction.date}</li>
-              <li>Amount: {transaction.amount}</li>
-              <li>Vendor: {transaction.vendor}</li>
-              <li>Item: {transaction.item}</li>
-            </ul>
-          ))}
-</div>
-          
-        
-    </div>
-    <div className="right-div">
+/* <div className="right-div">
     <AddTransactions onAddTransaction={onAddTransaction} />
     <RemoveTransactions onRemoveTransaction={onRemoveTransaction} />  
       </div>
+*/ 
+//<h3>Amount Spent {spent}</h3>
 
+/** {careers.map(career => (
+        <Link to={transactionload.id.toString()} key={transactionload.id}>
+        
+        </Link>
+      ))}
+      */ 
+
+  return (
+   
+<>
+<h1 >Transctions: </h1>
+<div className="scrollable-list">
+         
+          {transactionFromLoader.map((transactionload) => (
+            
+            <ul key={transactionload.id}><Link to={transactionload.id.toString()+"/transactionMethods/UpdateTransaction"} key={transactionload.id}> <strong>Transaction #{transactionload.id}</strong>
+            </Link>
+            
+              <li>Date: {transactionload.date} </li>
+              <li>Amount: {transactionload.amount}</li>
+              <li>Vendor: {transactionload.vendor}</li>
+              <li>Item: {transactionload.item}</li>
+             <li><Link to={transactionload.id.toString()+"/transactionMethods/UpdateTransaction"} key={transactionload.id}> <button className="update-button">Update Transaction</button>
+
+</Link>
+<Link to={transactionload.id.toString()+"/transactionMethods/RemoveTransactions/"} key={transactionload.id}> <button className="update-button" onClick={RemoveTransactionAction}>Delete Transaction</button>
+
+</Link>
+</li>
+
+              
+            </ul>
+          ))}
+
+     
+    </div>
+    <p>Click on a Transaction to Update it.</p>
+    <nav>
+        <NavLink to="AddTransactions" className="transactionslist-nav">Add Transaction</NavLink>
+      </nav>
+   
+   <main>
+    <Outlet/>
+   </main>
     </>
     
   )
 }
 
 export default App
+
+/**
+ *  <NavLink to="RemoveTransactions" className="transactionslist-nav">Remove Transaction</NavLink>
+ */

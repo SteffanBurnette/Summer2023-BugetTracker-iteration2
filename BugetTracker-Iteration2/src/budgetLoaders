@@ -1,0 +1,15 @@
+
+
+//Loader that gets the transactions from the json file
+export const transactionsLoader = async()=>{
+    //Gets the data from the json file
+    const response= await fetch('http://localhost:4000/purchaseHistory');
+
+//If data was not read properly from the db the error will be thrown
+    if(!response.ok){
+        throw Error("Data was not properly read!")
+    }
+
+    //Returns the data from the json file
+    return response.json(); 
+}
