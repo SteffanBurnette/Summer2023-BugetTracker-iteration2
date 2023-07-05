@@ -1,9 +1,11 @@
+import {GiMoneyStack} from "react-icons/gi";
+
 export default function MainPageLayout() {
     return (
       <div className="help-layout">
   
-        <h2><strong>Welcome to the start of your financial freedom!</strong></h2>
-        
+        <h2><strong>Welcome to the start of your financial freedom!<GiMoneyStack/></strong></h2>
+
         <p>Are you tired of constantly battling financial stress? Worried about meeting your monthly bills or missing out on family vacations?
              Does the thought of not being able to retire on time keep you up at night? Its time to
               put those worries to rest! Introducing our revolutionary website that will guide you

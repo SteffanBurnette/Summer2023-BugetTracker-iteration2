@@ -14,9 +14,10 @@ import AddTransactions, {transactionAction} from './transactionMethods/AddTransa
 import RemoveTransactions, {RemoveTransactionLoader, RemoveTransactionAction} from './transactionMethods/RemoveTransactions.jsx';
 import UpdateTransaction, {UpdateTransactionLoader, UpdateTransactionAction} from './transactionMethods/UpdateTransaction.jsx';
 import Faq from './help/Faq';
-import Contact from './help/Contact';
+import Contact,{contactAction,contactLoader}from './help/Contact';
 import NotFound from './NotFound';
 import {transactionsLoader} from './budgetLoaders'
+import BudgetInfo,{budgetAction, budgetLoader} from './budgets/budgetInfo.jsx';
 
 //Layouts
 import RootLayout from './layouts/RootLayout.jsx'
@@ -50,9 +51,11 @@ const router = createBrowserRouter(
      
      <Route path="help" element={<HelpLayout />}>
         <Route path="faq" element={<Faq />} />
-        <Route path="contact" element={<Contact/>} />
+        <Route path="contact" action={contactAction} loader={contactLoader}
+        element={<Contact/>} />
       </Route>
 
+      <Route path="addBudget" element={<BudgetInfo/>} action={budgetAction} loader={budgetLoader} errorElement={<NotFound />}/>
 
       <Route path="*" element={<NotFound />} />
     </Route>

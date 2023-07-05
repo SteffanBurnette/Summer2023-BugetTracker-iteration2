@@ -114,7 +114,9 @@ export async function RemoveTransactionAction({request, params}){
       
     })
   
-    return redirect(`TransactionList`);
+    //return redirect(`TransactionList`);
+    //Makes it so that the page does not navigate after editing
+    return null;
 
 }
 

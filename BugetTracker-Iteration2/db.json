@@ -56,5 +56,70 @@
       "item": "Socks",
       "id": 9
     }
+  ],
+  "budget": [
+    {
+      "id": 1,
+      "MonthlyIncome": 0,
+      "Expenses": 0,
+      "BudgetPlan": 0
+    },
+    {
+      "id": 2,
+      "MonthlyIncome": 0,
+      "Expenses": 0,
+      "BudgetPlan": 0
+    },
+    {
+      "MonthlyIncome": "3000",
+      "expenses": "2000",
+      "BudgetPlan": "1000",
+      "amount": null,
+      "id": 3
+    },
+    {
+      "MonthlyIncome": "67",
+      "expenses": "5",
+      "BudgetPlan": "23",
+      "amount": null,
+      "id": 4
+    }
+  ],
+  "Comments": [
+    {
+      "user": "DaveKindey@gmail.com",
+      "Comment": "I Love this budget tracker, all of my friends use it and it is a game changer.",
+      "id": 1
+    },
+    {
+      "user": "ShadeaKrystal@gmail.com",
+      "Comment": "Before using this budget tracker my finaces were horrible. Now I feel as if ive taken control of my life again.",
+      "id": 2
+    },
+    {
+      "user": "Denzel@gmail.com",
+      "Comment": "This budget tracker is the BEST thing that I've had the pleasure of stumbling across!",
+      "id": 3
+    },
+    {
+      "user": "Racheal@gmail.com",
+      "Comment": "This budget tracker is the BEST thing that I've had the pleasure of stumbling across!",
+      "id": 4
+    },
+    {
+      "user": "Kashimo@gmail.com",
+      "Comment": "This budget tracker is great for those who would like a simple application that tracks their spending and gives users tips on how to better improve their spending habits.",
+      "id": 5
+    },
+    {
+      "user": "Random@yahoo.com",
+      "Comment": "This app is amazing I, would pay for it",
+      "id": 6
+    },
+    {
+      "user": "Luffy@gmail.com",
+      "Comment": "This budget tracker helped me find the one piece. ",
+      "id": 7
+    }
   ]
 }

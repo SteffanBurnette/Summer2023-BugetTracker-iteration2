@@ -130,7 +130,9 @@ const handleInputChange = (e) => {
 
     })
 
-  return redirect('/TransactionList');
+  //return redirect('/TransactionList');
+  //Stays on the same page after executing
+  return null;
   }
 
   

@@ -47,7 +47,7 @@ export default function Faq() {
         
 
         <div className="question">
-          <p>Remember, using a budget tracker can greatly assist you in achieving your financial goals, providing better control over your expenses, and improving your overall financial well-being.</p>
+          <p><strong>Remember, using a budget tracker can greatly assist you in achieving your financial goals, providing better control over your expenses, and improving your overall financial well-being.</strong></p>
         </div>
   
       </div>

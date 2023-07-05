@@ -4,6 +4,8 @@ import {useLoaderData} from 'react-router-dom';
 import { NavLink, Outlet, Form, redirect, Link } from "react-router-dom"
 //import {RemoveTransactionAction} from "./transactionMethods/RemoveTransactions"
 import { RemoveTransactionAction } from "./transactionMethods/RemoveTransactions";
+import {CiMoneyCheck1} from "react-icons/ci";
+import {PiProjectorScreenChartDuotone} from "react-icons/pi";
 
 
 function App() {
@@ -86,7 +88,7 @@ const onRemoveTransaction = (removedItem) => {
   return (
    
 <>
-<h1 >Transctions: </h1>
+<h1 ><PiProjectorScreenChartDuotone/>Transctions: </h1>
 <div className="scrollable-list">
          
           {transactionFromLoader.map((transactionload) => (
@@ -114,7 +116,7 @@ const onRemoveTransaction = (removedItem) => {
     </div>
     <p>Click on a Transaction to Update it.</p>
     <nav>
-        <NavLink to="AddTransactions" className="transactionslist-nav">Add Transaction</NavLink>
+        <NavLink to="AddTransactions" className="transactionslist-nav"><CiMoneyCheck1/>Add Transaction</NavLink>
       </nav>
    
    <main>

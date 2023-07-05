@@ -13,3 +13,4 @@ export const transactionsLoader = async()=>{
     //Returns the data from the json file
     return response.json(); 
 }
+
