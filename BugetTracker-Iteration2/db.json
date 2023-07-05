@@ -60,29 +60,46 @@
   "budget": [
     {
       "id": 1,
-      "MonthlyIncome": 0,
-      "Expenses": 0,
-      "BudgetPlan": 0
+      "MonthlyIncome": 100,
+      "expenses": 10,
+      "amount":90,
+      "BudgetPlan": 20
     },
     {
       "id": 2,
-      "MonthlyIncome": 0,
-      "Expenses": 0,
-      "BudgetPlan": 0
+      "MonthlyIncome": 1000,
+      "expenses": 300,
+      "amount":700,
+      "BudgetPlan": 700
     },
     {
-      "MonthlyIncome": "3000",
-      "expenses": "2000",
-      "BudgetPlan": "1000",
-      "amount": null,
+      "MonthlyIncome": 3000,
+      "expenses": 2000,
+      "BudgetPlan": 1000,
+      "amount": 1000,
       "id": 3
     },
+   
     {
-      "MonthlyIncome": "67",
-      "expenses": "5",
-      "BudgetPlan": "23",
-      "amount": null,
-      "id": 4
+      "MonthlyIncome": 300,
+      "expenses": 150,
+      "amount": 150,
+      "BudgetPlan": 37,
+      "id": 5
+    },
+    {
+      "MonthlyIncome": 400,
+      "expenses": 200,
+      "amount": 200,
+      "BudgetPlan": 200,
+      "id": 6
+    },
+    {
+      "MonthlyIncome": 500,
+      "expenses": 250,
+      "amount": 250,
+      "BudgetPlan": 250,
+      "id": 7
     }
   ],
   "Comments": [

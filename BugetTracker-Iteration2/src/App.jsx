@@ -15,6 +15,8 @@ function App() {
 
 const transactionFromLoader= useLoaderData();
 
+/*
+
 const handleDeleteTransaction = async () => {
   try {
     await RemoveTransactionAction();
@@ -68,7 +70,7 @@ const onRemoveTransaction = (removedItem) => {
     return prevTransactions.filter((transaction) => transaction.item !== removedItem);
   });
 };
-
+*/
 //let spent=+transactions.forEach((transaction)=>transaction.amount)
 
 /* <div className="right-div">

@@ -22,17 +22,18 @@ export default function BudgetInfo() {
 
                     <ul  key={transactionload.id}>
 
-                        <li>Monthly Income: {transactionload.MonthlyIncome} </li>
-                        <li>Monthly Expenses: {transactionload.expenses}</li>
-                        <li>Amount to save: {transactionload.BudgetPlan}</li>
-                        <li>Amount spent so far: {transactionload.amount}</li>
+                        <li>Monthly Income: ${transactionload.MonthlyIncome} </li>
+                        <li>Monthly Expenses: ${transactionload.expenses}</li>
+                        <li>Amount spent so far: ${transactionload.amount}</li>
+                        <li>based on your data you need to save this much to save 25% of your income after your monthly expenses: ${transactionload.BudgetPlan*.25}</li>
+                        <li>based on your data you need to save this much to save 50% of your income after your monthly expenses: ${transactionload.BudgetPlan*.50}</li>
                     </ul>
 
                 ))}
      
             </div>
 
-
+        <h3>Enter your financial data so that we can create a budget plan for you to use:</h3>
 
             <Form
                 method="post"
@@ -50,7 +51,7 @@ export default function BudgetInfo() {
                     />
                 </fieldset>
                 <fieldset className="flex flex-col">
-                    <label htmlFor="expenses">Your Expenses</label>
+                    <label htmlFor="expenses">Monthly Expenses</label>
                     <input
 
                         type="number"
@@ -59,16 +60,7 @@ export default function BudgetInfo() {
                         className="contact-form-input-textarea"
                     />
                 </fieldset>
-                <fieldset className="flex flex-col">
-                    <label htmlFor="BudgetPlan">BugetPlan</label>
-                    <input
-
-                        type="number"
-                        name="BudgetPlan"
-                        id="BudgetPlan"
-                        className="contact-form-input-textarea"
-                    />
-                </fieldset>
+                
                 <input
                     className="bg-blue-500 hover:bg-blue-600 text-white transition mt-4 py-2 cursor-pointer "
                     type="submit"
@@ -84,7 +76,11 @@ export default function BudgetInfo() {
 export async function budgetAction({ request }) {
     let formData = await request.formData();
     let transactionData = Object.fromEntries(formData);
-    transactionData.amount = parseInt(transactionData.amount);
+    transactionData.MonthlyIncome = parseInt(transactionData.MonthlyIncome);
+    transactionData.expenses=parseInt(transactionData.expenses);
+    let spent=transactionData.MonthlyIncome-transactionData.expenses;
+    transactionData.amount = parseInt(spent);
+    transactionData.BudgetPlan=parseInt(transactionData.amount);
 
     //Gets the form data and addsa it to the db.json file.
 
@@ -111,3 +107,25 @@ export const budgetLoader = async ({ params }) => {
 
     return res.json()
 }
+
+/*<fieldset className="flex flex-col">
+                    <label htmlFor="BudgetPlan">BugetPlan</label>
+                    <input
+
+                        type="number"
+                        name="BudgetPlan"
+                        id="BudgetPlan"
+                        className="contact-form-input-textarea"
+                    />
+                </fieldset>
+                <fieldset className="flex flex-col">
+                    <label htmlFor="amount">Amount spent so far</label>
+                    <input
+
+                        type="number"
+                        name="amount"
+                        id="amount"
+                        className="contact-form-input-textarea"
+                    />
+                </fieldset>
+                */
