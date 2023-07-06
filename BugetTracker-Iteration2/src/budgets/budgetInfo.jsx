@@ -25,8 +25,8 @@ export default function BudgetInfo() {
                         <li>Monthly Income: ${transactionload.MonthlyIncome} </li>
                         <li>Monthly Expenses: ${transactionload.expenses}</li>
                         <li>Amount spent so far: ${transactionload.amount}</li>
-                        <li>based on your data you need to save this much to save 25% of your income after your monthly expenses: ${transactionload.BudgetPlan*.25}</li>
-                        <li>based on your data you need to save this much to save 50% of your income after your monthly expenses: ${transactionload.BudgetPlan*.50}</li>
+                        <li>Based on your data you need to save this much to save 25% of your income after your monthly expenses: ${transactionload.BudgetPlan*.25}</li>
+                        <li>Based on your data you need to save this much to save 50% of your income after your monthly expenses: ${transactionload.BudgetPlan*.50}</li>
                     </ul>
 
                 ))}
