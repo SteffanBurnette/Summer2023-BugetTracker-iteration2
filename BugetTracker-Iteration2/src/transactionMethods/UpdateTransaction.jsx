@@ -103,6 +103,6 @@ export async function UpdateTransactionAction({request, params}){
       body: JSON.stringify(preparedTransaction)
     })
   
-    return redirect(`TransactionList`);
+    return redirect(`/`);
 
 }

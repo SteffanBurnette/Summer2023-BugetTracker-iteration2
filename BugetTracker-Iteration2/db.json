@@ -50,11 +50,18 @@
       "id": 8
     },
     {
-      "date": "2023-07-05",
-      "amount": 90,
-      "vendor": "Amazon",
-      "item": "Socks",
+      "date": "2023-07-07",
+      "amount": 200,
+      "vendor": "Apple",
+      "item": "The One",
       "id": 9
+    },
+    {
+      "date": "2023-07-07",
+      "amount": 700,
+      "vendor": "Anderson",
+      "item": "Window",
+      "id": 10
     }
   ],
   "budget": [
@@ -62,14 +69,14 @@
       "id": 1,
       "MonthlyIncome": 100,
       "expenses": 10,
-      "amount":90,
+      "amount": 90,
       "BudgetPlan": 20
     },
     {
       "id": 2,
       "MonthlyIncome": 1000,
       "expenses": 300,
-      "amount":700,
+      "amount": 700,
       "BudgetPlan": 700
     },
     {
@@ -79,7 +86,6 @@
       "amount": 1000,
       "id": 3
     },
-   
     {
       "MonthlyIncome": 300,
       "expenses": 150,
